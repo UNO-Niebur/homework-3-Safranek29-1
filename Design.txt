@@ -1,0 +1,25 @@
+Game Name: Dice Roulette
+Board: 30 spaces, players move forward by rolling a dice (1-6)
+
+Rules:
+- 3 players take turns rolling and moving forward
+- Landing on Treasure moves you forward 2 extra spaces
+- Landing on Heal moves you forward 1 extra space
+- Landing on Trap moves you back 2 spaces
+- First player to reach space 30 wins
+- Game resets after a win
+
+Functions:
+- loadGameData: reads events.txt and returns a raw list of strings
+- parseData: converts the raw list into a dictionary with turn, players, and events
+- saveGameData: writes the updated game state back to events.txt
+- displayBoard: prints the 30 space board showing player and event positions
+- movePlayer: handles a full turn - input, dice roll, movement, events, and turn switching
+- main: runs the program
+
+Data Storage:
+- events.txt stores turn, player positions, and event locations
+- Inside the program data is stored as a dictionary with three keys:
+  - turn: whose turn it is
+  - players: dictionary of player names and their positions
+  - events: dictionary of space numbers and event names
